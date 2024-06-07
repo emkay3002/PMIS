@@ -1,6 +1,5 @@
 package com.example.backup;
 
-
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -66,4 +65,3 @@ public class CommunityServiceModel {
         this.taskStatus.set(taskStatus);
     }
 }
-

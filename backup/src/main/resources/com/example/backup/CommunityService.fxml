@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.backup.CommunityServiceController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.backup.CommunityServiceController">
     <children>
         <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #101D42;">
             <children>
@@ -33,29 +25,31 @@
                 <TableColumn fx:id="columnTaskStatus" prefWidth="100.0" text="Task Status" />
             </columns>
         </TableView>
-        <MenuButton layoutX="353.0" layoutY="83.0" mnemonicParsing="false" text="Sort by">
+        <MenuButton fx:id="sortMenuButton" layoutX="353.0" layoutY="83.0" mnemonicParsing="false" text="Sort by">
             <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
+                <MenuItem fx:id="sortByTaskStatusWaitingMenuItem" mnemonicParsing="false" text="Task Status: Waiting" />
+                <MenuItem fx:id="sortByTaskStatusInProgressMenuItem" mnemonicParsing="false" text="Task Status: In Progress" />
+                <MenuItem fx:id="sortByTaskStatusCompletedMenuItem" mnemonicParsing="false" text="Task Status: Completed" />
+                <MenuItem fx:id="sortByInmateIDMenuItem" mnemonicParsing="false" text="Inmate ID" />
+
             </items>
         </MenuButton>
-        <Label layoutX="22.0" layoutY="240.0" text="Assign Community Service Task">
+
+        <Label layoutX="22.0" layoutY="290.0" text="Assign Community Service Task">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
         </Label>
-        <Label layoutX="22.0" layoutY="268.0" text="Inmate ID" />
-        <ComboBox layoutX="92.0" layoutY="264.0" prefWidth="150.0" />
+        <Label layoutX="22.0" layoutY="329.0" text="Inmate ID" />
+        <ComboBox fx:id="inmateIDComboBox" layoutX="92.0" layoutY="325.0" prefWidth="150.0" />
         <Button fx:id="viewTaskAssignmentButton" layoutX="437.0" layoutY="83.0" mnemonicParsing="false" text="View Task Assignment" />
-        <Label layoutX="22.0" layoutY="306.0" text="Task Name" />
-        <ComboBox layoutX="92.0" layoutY="302.0" prefWidth="150.0" />
-        <Button layoutX="22.0" layoutY="342.0" mnemonicParsing="false" text="Assign" />
+        <Label layoutX="22.0" layoutY="372.0" text="Task Name" />
+        <ComboBox fx:id="taskNameComboBox" layoutX="92.0" layoutY="368.0" prefWidth="150.0" />
+        <Button fx:id="assignButton" layoutX="22.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleAssignButtonAction" text="Assign" />
         <Label layoutX="22.0" layoutY="87.0" text="Community Service Progress">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
         </Label>
-        <Label layoutX="272.0" layoutY="268.0" text="Hours" />
-        <TextField layoutX="314.0" layoutY="264.0" />
     </children>
 </AnchorPane>
