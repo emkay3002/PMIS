@@ -15,34 +15,36 @@
     <children>
         <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #101D42;">
             <children>
-                <Label layoutX="129.0" layoutY="18.0" text="Task Assignment and  Monitoring" textFill="WHITE">
+                <Label layoutX="129.0" layoutY="18.0" text="Task Assignment and Monitoring" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Label>
-                <Button fx:id="backButton" layoutX="25.0" layoutY="22.0" mnemonicParsing="false" text="Back" />
+                <Button fx:id="backButton" layoutX="25.0" layoutY="22.0" mnemonicParsing="false" text="Back" onAction="#handleBackButtonAction" />
             </children>
         </Pane>
-        <TableView layoutX="37.0" layoutY="124.0" prefHeight="147.0" prefWidth="525.0">
+        <TableView fx:id="taskMonitorTable" layoutX="37.0" layoutY="124.0" prefHeight="147.0" prefWidth="525.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="columnInmateID" prefWidth="75.0" text="Inmate ID" />
+                <TableColumn fx:id="columnTaskID" prefWidth="75.0" text="Task ID" />
+                <TableColumn fx:id="columnTaskName" prefWidth="150.0" text="Task Name" />
+                <TableColumn fx:id="columnTaskStatus" prefWidth="100.0" text="Task Status" />
             </columns>
         </TableView>
-        <MenuButton layoutX="37.0" layoutY="83.0" mnemonicParsing="false" text="Sort by">
+        <MenuButton fx:id="sortMenuButton" layoutX="37.0" layoutY="83.0" mnemonicParsing="false" text="Sort by">
             <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
+                <MenuItem text="In Progress" onAction="#sortTableByTaskStatusInProgress" />
+                <MenuItem text="Waiting" onAction="#sortTableByTaskStatusWaiting" />
             </items>
         </MenuButton>
-        <Button layoutX="506.0" layoutY="83.0" mnemonicParsing="false" text="Refresh" />
+        <Button fx:id="refreshButton" layoutX="506.0" layoutY="83.0" mnemonicParsing="false" text="Refresh" onAction="#handleRefreshButtonAction"/>
         <Label layoutX="37.0" layoutY="290.0" text="Warning Submission">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
         </Label>
         <Label layoutX="37.0" layoutY="316.0" text="Inmate ID" />
-        <ComboBox layoutX="107.0" layoutY="312.0" prefWidth="150.0" />
-        <Button layoutX="37.0" layoutY="345.0" mnemonicParsing="false" text="Submit" />
+        <ComboBox fx:id="inmateIDComboBox" layoutX="107.0" layoutY="312.0" prefWidth="150.0" />
+        <Button fx:id="submitButton" layoutX="37.0" layoutY="345.0" mnemonicParsing="false" text="Submit" onAction="#handleSubmitButtonAction"/>
     </children>
 </AnchorPane>

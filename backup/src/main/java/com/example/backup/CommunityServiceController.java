@@ -43,6 +43,7 @@ public class CommunityServiceController {
     private Button viewTaskAssignmentButton;
 
 
+
     @FXML
     private TableView<CommunityServiceModel> communityServiceTable;
 
@@ -209,10 +210,17 @@ public class CommunityServiceController {
     private void loadData() {
         communityServiceData = FXCollections.observableArrayList();
 
-        //Dummy data for now
+
         communityServiceData.add(new CommunityServiceModel(1, 101, "Cleaning", "In Progress"));
         communityServiceData.add(new CommunityServiceModel(2, 102, "Cooking", "Complete"));
         communityServiceData.add(new CommunityServiceModel(3, 103, "Gardening", "Slacking"));
+        communityServiceData.add(new CommunityServiceModel(4, 104, "Tutoring", "In Progress"));
+        communityServiceData.add(new CommunityServiceModel(5, 105, "Painting", "Waiting"));
+        communityServiceData.add(new CommunityServiceModel(6, 106, "Teaching", "Slacking"));
+        communityServiceData.add(new CommunityServiceModel(7, 107, "Mentoring", "In Progress"));
+        communityServiceData.add(new CommunityServiceModel(8, 108, "Fundraising", "Waiting"));
+        communityServiceData.add(new CommunityServiceModel(9, 109, "Event Planning", "Slacking"));
+        communityServiceData.add(new CommunityServiceModel(10, 110, "Volunteer Coordination", "In Progress"));
 
         // Set the data to the table
         communityServiceTable.setItems(communityServiceData);
