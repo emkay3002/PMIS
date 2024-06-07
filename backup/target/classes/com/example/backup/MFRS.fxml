@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.backup.MFRSController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="774.0" style="-fx-background-color: #101D42;">
+            <children>
+                <Label layoutX="268.0" layoutY="18.0" text="Monitor Request Status" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Label>
+                <Button fx:id="backButton" layoutX="20.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+            </children>
+        </Pane>
+        <TableView fx:id="requestStatusTableView" layoutX="23.0" layoutY="119.0" prefHeight="253.0" prefWidth="726.0">
+            <columns>
+                <TableColumn fx:id="requestIdColumn" prefWidth="75.0" text="Request ID" />
+                <TableColumn fx:id="natureColumn" prefWidth="150.0" text="Nature" />
+                <TableColumn fx:id="locationColumn" prefWidth="150.0" text="Location" />
+                <TableColumn fx:id="urgencyColumn" prefWidth="100.0" text="Urgency" />
+                <TableColumn fx:id="assignedStaffColumn" prefWidth="150.0" text="Assigned Staff" />
+                <TableColumn fx:id="progressColumn" prefWidth="100.0" text="Progress" />
+            </columns>
+        </TableView>
+        <Button fx:id="refreshButton" layoutX="693.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleRefreshButtonAction" text="Refresh" />
+        <MenuButton fx:id="sortMenuButton" layoutX="23.0" layoutY="83.0" mnemonicParsing="false" text="Sort by">
+            <items>
+                <MenuItem fx:id="sortByRequestId" onAction="#handleSortByRequestIdAction" text="Request ID" />
+                <MenuItem fx:id="sortByUrgency" onAction="#handleSortByUrgencyAction" text="Urgency" />
+                <MenuItem fx:id="sortByWaitingRecords" onAction="#handleSortByWaitingRecordsAction" text="Waiting Records" />
+                <MenuItem fx:id="sortByInProgressRecords" onAction="#handleSortByInProgressRecordsAction" text="In Progress Records" />
+            </items>
+        </MenuButton>
+    </children>
+</AnchorPane>

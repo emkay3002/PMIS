@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.backup.FacilityController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="599.0" style="-fx-background-color: #101D42;">
+            <children>
+                <Label layoutX="194.0" layoutY="18.0" text="Facility Management" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Label>
+                <Button fx:id="backButton" layoutX="22.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+            </children>
+        </Pane>
+        <TableView fx:id="requestTableView" layoutX="29.0" layoutY="125.0" prefHeight="123.0" prefWidth="527.0">
+            <columns>
+                <TableColumn fx:id="requestIdColumn" prefWidth="75.0" text="RequestID" />
+                <TableColumn fx:id="requestNatureColumn" prefWidth="100.0" text="Nature" />
+                <TableColumn fx:id="locationColumn" prefWidth="100.0" text="Location" />
+                <TableColumn fx:id="commentsColumn" prefWidth="150.0" text="Comments" />
+                <TableColumn fx:id="urgencyColumn" prefWidth="100.0" text="Urgency" />
+            </columns>
+        </TableView>
+        <Label layoutX="29.0" layoutY="82.0" text="Request Status">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="29.0" layoutY="262.0" text="Generate New Maintenance Request" />
+        <Label layoutX="33.0" layoutY="307.0" text="Nature" />
+        <TextField fx:id="requestNatureField" layoutX="91.0" layoutY="294.0" prefHeight="25.0" prefWidth="149.0" />
+        <Label layoutX="29.0" layoutY="352.0" text="Location" />
+        <TextField fx:id="locationField" layoutX="91.0" layoutY="348.0" prefHeight="25.0" prefWidth="149.0" />
+        <Label layoutX="277.0" layoutY="352.0" text="Urgency" />
+        <ComboBox fx:id="urgencyComboBox" layoutX="348.0" layoutY="348.0" prefWidth="149.0" />
+        <Label layoutX="271.0" layoutY="307.0" text="Comments" />
+        <TextArea fx:id="commentsField" layoutX="348.0" layoutY="294.0" prefHeight="43.0" prefWidth="149.0" />
+        <Button fx:id="submitButton" layoutX="514.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Submit" />
+        <Button fx:id="cancelButton" layoutX="445.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" text="Cancel" />
+        <Label fx:id="statusLabel" layoutX="29.0" layoutY="386.0" textFill="RED" />
+        <Button fx:id="monitorStatusButton" layoutX="461.0" layoutY="86.0" mnemonicParsing="false" text="Monitor Status" onAction="#handleMonitorStatusAction" />
+    </children>
+</AnchorPane>
