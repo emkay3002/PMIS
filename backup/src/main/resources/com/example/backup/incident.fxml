@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.backup.Incident">
+    <children>
+        <TextField fx:id="incidentIdField" layoutX="14.0" layoutY="14.0" prefWidth="200.0" promptText="Incident ID" />
+        <TextField fx:id="officerIdField" layoutX="14.0" layoutY="50.0" prefWidth="200.0" promptText="Officer ID" />
+        <DatePicker fx:id="datePicker" layoutX="14.0" layoutY="86.0" prefWidth="200.0" promptText="Date" />
+        <TextField fx:id="timeField" layoutX="14.0" layoutY="122.0" prefWidth="200.0" promptText="Time (HH:MM)" />
+        <TextField fx:id="locationField" layoutX="14.0" layoutY="158.0" prefWidth="200.0" promptText="Location" />
+        <TextField fx:id="natureField" layoutX="14.0" layoutY="194.0" prefWidth="200.0" promptText="Nature of Incident" />
+        <TextArea fx:id="descriptionArea" layoutX="14.0" layoutY="230.0" prefHeight="100.0" prefWidth="200.0" promptText="Description" />
+        <Button fx:id="attachFileButton" layoutX="14.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleAttachFile" text="Attach File" />
+        <TextArea fx:id="witnessesArea" layoutX="14.0" layoutY="376.0" prefHeight="100.0" prefWidth="200.0" promptText="Witness Statements (Name: Statement)" />
+        <Button layoutX="14.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleSubmitIncident" text="Submit Incident" />
+    </children>
+</AnchorPane>

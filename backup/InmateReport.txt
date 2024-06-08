@@ -1,0 +1,28 @@
+Inmate Name: John Doe
+Date of Birth: 1980-05-15
+Gender: Male
+Incarceration Date: 2023-01-10
+Release Date: 2025-01-10
+Behavior Records: Good behavior
+Rehabilitation Status: In Progress
+
+Inmate Name: Jane Smith
+Date of Birth: 1990-03-22
+Gender: Female
+Incarceration Date: 2022-06-01
+Release Date: 2024-06-01
+Behavior Records: No issues
+Rehabilitation Status: Completed
+
+Inmate Name: Michael Johnson
+Date of Birth: 1975-11-30
+Gender: Male
+Incarceration Date: 2021-09-15
+Release Date: 2023-09-15
+Behavior Records: Minor incidents
+Rehabilitation Status: In Progress
+
+Total Inmates: 3
+Male Inmates: 2
+Female Inmates: 1
+Average Age: 42.00

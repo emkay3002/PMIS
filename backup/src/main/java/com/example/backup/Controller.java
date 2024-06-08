@@ -24,6 +24,15 @@ public class Controller {
     private Button communityButton;
 
     @FXML
+    private Button profilingButton;
+
+    @FXML
+    private Button surveysFeedbackButton;
+
+    @FXML
+    private Button incidentButton;
+
+    @FXML
     private Hyperlink aboutLink;
 
     @FXML
@@ -63,6 +72,45 @@ public class Controller {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("CommunityService.fxml"));
             Stage stage = (Stage) transportButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Action for profiling button click
+    @FXML
+    private void handleProfilingButtonClick() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Profiling.fxml"));
+            Stage stage = (Stage) profilingButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Action for Surveys and Feedback button click
+    @FXML
+    private void handleSurveysFeedbackButtonClick() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Survey.fxml"));
+            Stage stage = (Stage) surveysFeedbackButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Action for Incident Reporting button click
+    @FXML
+    private void handleIncidentReportingButtonClick() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("incident.fxml"));
+            Stage stage = (Stage) incidentButton.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
